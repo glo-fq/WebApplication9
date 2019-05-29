@@ -1,7 +1,103 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Ver paquetes disponibles";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<div class="row justify-content-end">
+    @*<div class="col-4">
+        <div class="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ordenar por
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Ninguno</button>
+                <button class="dropdown-item" type="button">Precio</button>
+                <button class="dropdown-item" type="button">Lugar</button>
+            </div>
+        </div>
+
+    </div>*@
+
+    <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Ordenar por...</option>
+            <option value="1">Ninguno</option>
+            <option value="2">Precio</option>
+            <option value="3">Lugar</option>
+        </select>
+
+</div>
+
+
+@*Tabla de paquetes disponibles*@
+<table class="table table-striped">
+    @*Fila de titulo*@
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*Local*@
+        <tr>
+            <th scope="row">1</th>
+            <td>Local</td>
+            <td>Salón deluxe, 20m^2, capacidad para 300 personas</td>
+            <td>$5000</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Local</td>
+            <td>Sala premium, fuente en la entrada, 18m^2, capacidad para 200 personas</td>
+            <td>$3800</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Local</td>
+            <td>Sala platino, candelabro gigante, 25m^2, capacidad para 500 personas</td>
+            <td>$7000</td>
+        </tr>
+        @*Catering*@
+        <tr>
+            <th scope="row">4</th>
+            <td>Catering</td>
+            <td>Incluye el desayuno</td>
+            <td>$20 por persona</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Catering</td>
+            <td>Incluye una entrada, plato fuerte y postre</td>
+            <td>$40 por persona</td>
+        </tr>
+        @*Musica*@
+        <tr>
+            <th scope="row">6</th>
+            <td>Música</td>
+            <td>DJ por una hora, comparsa al final del evento</td>
+            <td>$800</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>Música</td>
+            <td>Música jazz en vivo por una hora, DJ por dos horas</td>
+            <td>$1800</td>
+        </tr>
+        @*Decoracion*@
+        <tr>
+            <th scope="row">8</th>
+            <td>Decoración</td>
+            <td>Arreglos florales, centro de mesa con jarrón con flores y velas flotando en agua</td>
+            <td>$600</td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>Decoración</td>
+            <td>Arreglos con estilo de diamante, centro de mesa de corona de diamante</td>
+            <td>$850</td>
+        </tr>
+    </tbody>
+</table>
